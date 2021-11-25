@@ -1,0 +1,21 @@
+[
+    {
+        "nombre": "Martin",
+        "apellido": "Parafita",
+        "DNI": "36755982",
+        "prendas": [
+            {
+                "prenda": "remeras",
+                "cantidad": 20
+            },
+            {
+                "prenda": "pantalones",
+                "cantidad": 10
+            },
+            {
+                "prenda": "zapatillas",
+                "cantidad": 3
+            }
+        ]
+    }
+]
