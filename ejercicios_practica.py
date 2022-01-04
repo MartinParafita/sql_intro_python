@@ -111,7 +111,7 @@ def search_by_grade(grade):
     conn = sqlite3.connect("secundaria.db")
     c = conn.cursor()
     busqueda = c.execute("SELECT id, name, age FROM estudiante WHERE grade = 3") # NO SE SI QUEDO BIEN ESTO, ME SALTA ALGO RARO EN LA TERMINAL
-    print('Los alumnos de 3er grado son: ', busqueda) 
+    print('Los alumnos de 3er grado son: ', busqueda.fetchall()) 
     conn.close()
 
 
@@ -139,7 +139,7 @@ def modify(id, name):
     conn = sqlite3.connect('secundaria.db')
     c = conn.cursor()
     correccion = c.execute(' UPDATE estudiante SET name=? WHERE id =?', (name, id))
-    print('La corrección quedó de la siguiente manera: ', correccion)
+    print('Las lineas corregidas son: ', correccion.rowcount)
     conn.commit()
     conn.close()
 
